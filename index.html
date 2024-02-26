@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Proptotype</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <aside id="sidebar">
+            <nav class="sidebar">
+                <h2>Hola!</h2>
+                <button id="openFormButton">Nueva Persona</button>
+            </nav>
+        </aside>
+
+        <section id="contentBoard">
+            <nav class="searchBar">
+                <div class="search">
+                    <input type="text" id="searchInput" placeholder="Buscar personas">
+                    <ul id="searchResults"></ul>
+                </div>
+
+                <div class="stateFilter">
+                    <select id="stateFilter">
+                        <option value="Todos">Todos</option>
+                        <option value="Cliente Potencial">Clientes Potenciales</option>
+                        <option value="Envío de propuesta">Envío de Propuestas</option>
+                        <option value="Negociación">Negociaciónes</option>
+                        <option value="Cierre de venta">Cierre de Ventas</option>
+                        <option value="Activo">Activos</option>
+                        <option value="Inactivo">Inactivos</option>
+                        <option value="Cliente Recurrente">Clientes Recurrentes</option>
+                    </select>
+                </div>
+            </nav>
+
+            <div id="peopleContainer">
+                <!--Acá se muestra la ficha de la persona: <div class="person-card"></div>-->
+            </div>
+        </section>
+    </main>
+    <section>
+        <!-- Formulario oculto inicialmente -->
+        <div id="personFormModal" class="modal">
+            <div class="modalContent">
+                <span class="close" id="closeFormButton"><b>&times</b></span>
+                <form id="personForm">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name">
+
+                    <label for="surname">Apellido:</label>
+                    <input type="text" id="surname" name="surname">
+
+                    <label for="company">Empresa:</label>
+                    <input type="text" id="company" name="company">
+
+                    <label for="mail">Correo Electrónico:</label>
+                    <input type="email" id="mail" name="mail">
+
+                    <label for="state">Estado</label>
+                    <select name="state" id="state">
+                        <option id="potentialCustomer" value="Cliente Potencial">Cliente Potencial</option>
+                        <option id="proposalSubmission" value="Envío de propuesta">Envío de Propuesta</option>
+                        <option id="negotiation" value="Negociación">Negociación</option>
+                        <option id="closignSales" value="Cierre de venta">Cierre de Venta</option>
+                        <option id="active" value="Activo">Activo</option>
+                        <option id="idle" value="Inactivo">Inactivo</option>
+                        <option id="recurrentCustomer" value="Cliente Recurrente">Cliente Recurrente</option>
+                    </select>
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+        <!-- Detalle de persona oculto inicialemte -->
+        <div id="personDetailsModal" class="modal">
+            <div class="modalContent">
+                <span class="close" id="closeDetailsButton">&times;</span>
+                <div id="personDetails">
+                    <!-- Acá de muestran los detalles de la persona -->
+                </div>
+            </div>
+        </div>
+        <div id="personDeleteAlert" class="msgArea modal">
+        </div>
+
+    </section>
+
+
+
+
+
+
+</body>
+
+</html>

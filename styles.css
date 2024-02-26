@@ -1,0 +1,246 @@
+:root {
+    --primaryColor: rgb(0, 0, 20);
+    --secondaryColor: rgb(134, 89, 206);
+    --gradient-1: linear-gradient(to bottom, rgb(50, 23, 124), #EC6EAD 100%); 
+    font-size: 17px;
+}
+
+
+.msgBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #000;
+
+    align-items: center; /* Centra horizontalmente los elementos dentro del panel */
+    justify-content: center; /* Centra verticalmente los elementos dentro del panel */
+    text-align: center; /* Centra el texto dentro del panel */
+    
+}
+
+.msgBox p {
+    line-height: 1.5;
+    padding: 10px 20px;
+    color: #ffffff;
+    padding: 20px 60px;
+    background-position: 25px center;
+    background-repeat: no-repeat;
+    z-index: 10;
+    text-align: start;
+
+}
+
+
+.msgBox button{
+       margin: 0 30px 30px 30px; 
+       background-color: rgb(84, 54, 153);
+       width: 30%;
+}
+
+
+
+
+
+body {
+    background-color: var(--primaryColor);
+    color: aliceblue;
+    font-family: "Google Sans Mono", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+
+}
+
+/*NAVEGACION*/
+
+.searchBar {
+    position: fixed;
+    background-color: var(--primaryColor);
+    top: 0;
+    width: calc(100% - 240px - 10%);
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 5% 0 5%;
+    height: auto;
+}
+
+#searchResults li {
+    cursor: pointer;
+    margin: 20px  0 20px 0;
+}
+
+#sidebar {
+    background: var(--gradient-1);
+    width: 240px;
+    margin: 0px;
+    height: 100vh;
+    top: 0;
+    border-radius: 0 15px 0px 0;
+    position: fixed;
+}
+
+#sidebar nav {
+    padding: 10px 40px;
+    font-size: 1.5rem;
+}
+
+#contentBoard {
+    margin-left: 240px;
+
+}
+
+
+/*CONTENIDO PRINCIPAL*/
+
+#peopleContainer {
+    padding: 8% 5%;
+
+}
+
+.personCard {
+    display: block;
+    float: left;
+    width: 200px;
+    min-height: 250px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: var(--secondaryColor);
+    color: black;
+    padding: 30px;
+    list-style: none;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+/*TAGS*/
+
+ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+select {
+    width: 106%;
+}
+
+select:focus {
+    outline-color: var(--secondaryColor);
+
+}
+
+select option:hover {
+    background-color: var(--secondaryColor);
+    color: #fff;
+}
+
+form input,
+form select {
+    margin-bottom: 20px;
+}
+
+input:focus {
+    outline-color: var(--secondaryColor);
+}
+
+input[type="submit"] {
+    background-color: var(--secondaryColor);
+    color: #ccc;
+    width: 106%;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primaryColor);
+
+}
+
+button {
+    background-color: var(--secondaryColor);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: var(--primaryColor);
+}
+
+
+#personDetailsModal button{
+    margin: 0px 20px;
+    text-align: center;
+    width: 40%;
+}
+
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: black;
+}
+
+.modalContent {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+.close {
+
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+
